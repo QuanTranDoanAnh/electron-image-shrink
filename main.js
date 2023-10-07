@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, Menu, globalShortcut } = require('electron')
 
 // Set env
 process.env.NODE_ENV = 'development'
@@ -9,7 +9,7 @@ const isMac = process.platform === 'darwin' ? true : false
 let mainWindow
 
 function createMainWindow () {
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     title: 'Image Shrink',
     width: 500,
     height: 600,
@@ -26,6 +26,8 @@ app.whenReady().then(() => {
 
   const mainMenu = Menu.buildFromTemplate(menu)
   Menu.setApplicationMenu(mainMenu)
+  globalShortcut.register('CmdOrCtrl+R', () => mainWindow.reload())
+  globalShortcut.register(isMac ? 'Command+Alt+I' : 'Ctrl+Shift+I', () => mainWindow.toggleDevTools())
 
   mainWindow.whenReady().then(() => mainWindow = null)
 })
