@@ -4,7 +4,8 @@
   "description": "Image Shrink App by ElectronJS - https://fpt-software.udemy.com/course/electron-from-scratch/learn/lecture/19823856#overview",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "nodemon --exec electron ."
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/QuanTranDoanAnh/electron-image-shrink#readme",
   "devDependencies": {
-    "electron": "^26.2.4"
+    "electron": "^26.2.4",
+    "nodemon": "^3.0.1"
   }
 }
