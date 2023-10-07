@@ -1,18 +1,22 @@
 {
   "name": "electron-image-shrink",
+  "productName": "ImageShrink",
   "version": "1.0.0",
   "description": "Image Shrink App by ElectronJS - https://fpt-software.udemy.com/course/electron-from-scratch/learn/lecture/19823856#overview",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "nodemon --exec electron ."
+    "dev": "nodemon --exec electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QuanTranDoanAnh/electron-image-shrink.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tran Doan Anh Quan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/QuanTranDoanAnh/electron-image-shrink/issues"
@@ -20,6 +24,7 @@
   "homepage": "https://github.com/QuanTranDoanAnh/electron-image-shrink#readme",
   "devDependencies": {
     "electron": "^26.2.4",
+    "electron-packager": "^17.1.2",
     "nodemon": "^3.0.1"
   },
   "dependencies": {
