@@ -1,0 +1,23 @@
+{
+  "name": "electron-image-shrink",
+  "version": "1.0.0",
+  "description": "Image Shrink App by ElectronJS - https://fpt-software.udemy.com/course/electron-from-scratch/learn/lecture/19823856#overview",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuanTranDoanAnh/electron-image-shrink.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuanTranDoanAnh/electron-image-shrink/issues"
+  },
+  "homepage": "https://github.com/QuanTranDoanAnh/electron-image-shrink#readme",
+  "devDependencies": {
+    "electron": "^26.2.4"
+  }
+}
