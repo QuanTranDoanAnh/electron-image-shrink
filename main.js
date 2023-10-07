@@ -42,7 +42,7 @@ app.whenReady().then(() => {
   const mainMenu = Menu.buildFromTemplate(menu)
   Menu.setApplicationMenu(mainMenu)
 
-  mainWindow.whenReady().then(() => mainWindow = null)
+  //mainWindow.whenReady().then(() => mainWindow = null)
 })
 
 const menu = [
