@@ -1,8 +1,9 @@
 const path = require('path')
 const os = require('os')
 const { app, BrowserWindow, Menu, globalShortcut, ipcMain, shell } = require('electron')
+const log = require('electron-log')
 // Set env
-process.env.NODE_ENV = 'development'
+process.env.NODE_ENV = 'production'
 
 const isDev = process.env.NODE_ENV !== 'production' ? true : false
 const isMac = process.platform === 'darwin' ? true : false
@@ -116,13 +117,13 @@ async function shrinkImage({ imgPath, quality, dest }) {
       ]
     })
 
-    console.log(dest)
+    log.info(files)
 
     shell.openPath(dest)
 
     mainWindow.webContents.send('image:done')
   } catch (err) {
-    console.error(err)
+    log.error(err)
   }
 }
 
